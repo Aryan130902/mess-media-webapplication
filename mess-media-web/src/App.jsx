@@ -2,6 +2,7 @@
 //importing components
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
+import Section from './components/Section/Section'
 
 function App() {
   
@@ -9,6 +10,7 @@ function App() {
     <div className="bg-dark">
       <Navbar/>
       <Header/>
+      <Section/>
     </div>
   )
 }

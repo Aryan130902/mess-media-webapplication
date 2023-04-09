@@ -3,8 +3,6 @@ import { SERVICE_URLS } from "../constants/service_url";
 
 const API_URL = 'http://localhost:8080';
 
-
-
 const API = {};
 
 for (const [key, value] of Object.entries(SERVICE_URLS)) {
@@ -63,4 +61,6 @@ const processResponse = async response => {
     }
   }
 
+
   export { API };
+
