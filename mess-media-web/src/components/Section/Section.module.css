@@ -1,8 +1,8 @@
 .section{
-    @apply text-white body-font
+    @apply text-white
 }
 
-.container{
+.container_box{
     @apply container px-5 pb-24 mx-auto
 }
 
@@ -11,5 +11,17 @@
 }
 
 .heading_text{
-    @apply sm:text-3xl text-2xl text-white font-extrabold mb-2
+    @apply sm:text-3xl text-2xl text-white font-extrabold mb-2 font-sans
+}
+
+.body_heading{
+    @apply text-lg text-white font-bold mb-2 pl-10 font-sans
+}
+
+.body_body{
+    @apply leading-relaxed text-base pl-10 font-sans
+}
+
+.image_container{
+    @apply inline-flex items-center justify-center mb-4
 }

@@ -5,7 +5,8 @@ import Footer from './components/Footer/Footer'
 import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import Section from './components/Section/Section'
-import SlidingComponent from './components/Slide/Sliding_Component'
+import Testimonial from './components/Testimonial/Testimonial'
+
 
 function App() {
   
@@ -15,8 +16,7 @@ function App() {
       <Header/>
       <Section/>
       <Footer/>
-      {/* <Login/> */}
-      {/* <SlidingComponent/> */}
+      <Testimonial/>
     </div>
   )
 }
