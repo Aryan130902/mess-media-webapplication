@@ -3,16 +3,17 @@
 }
 
 .container_box{
-    @apply container px-5 pb-24 mx-auto
+    @apply container px-12 pb-24 
 }
 
 .heading{
-    @apply flex flex-wrap mb-20 
+    @apply flex flex-wrap w-full mb-20 flex-col 
 }
 
 .heading_text{
     @apply sm:text-3xl text-2xl text-white font-extrabold mb-2 font-sans
 }
+
 
 .body_heading{
     @apply text-lg text-white font-bold mb-2 pl-10 font-sans

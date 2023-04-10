@@ -15,8 +15,8 @@ function App() {
       <Navbar/>
       <Header/>
       <Section/>
-      <Footer/>
       <Testimonial/>
+      <Footer/>
     </div>
   )
 }

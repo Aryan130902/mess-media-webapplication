@@ -8,3 +8,8 @@ export const Advantages = [
     { id:6 , heading : "Healthy and delicious food" , body : "Mess Media ensures that you have access to healthy and delicious food options. You can choose from a range of messes that serve nutritious meals made with fresh ingredients, helping you to maintain a balanced and healthy diet." },
 
 ]
+
+export const Footer_link = [
+    { id:1 , MessName:"Ganesh" , City:"Indore" },
+    { id:2 , MessName:"Hare Krishna" , City:"Indore" }
+]
