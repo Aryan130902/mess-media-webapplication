@@ -6,7 +6,7 @@ import Header from './components/Header/Header'
 import Navbar from './components/Navbar/Navbar'
 import Section from './components/Section/Section'
 import Testimonial from './components/Testimonial/Testimonial'
-
+import Dummy from './components/Dummy/dummy'
 
 function App() {
   
@@ -17,6 +17,7 @@ function App() {
       <Section/>
       <Testimonial/>
       <Footer/>
+      {/* <Dummy/> */}
     </div>
   )
 }
