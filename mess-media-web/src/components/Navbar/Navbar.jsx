@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import styles from './Navbar.module.css';
+import Headroom from 'react-headroom';
 
 
 
@@ -11,7 +12,8 @@ const  Navbar = () => {
   };
 
   return (
-    <nav className=" bg-dark">
+    <Headroom>
+    <div className="bg-transparent fixed w-full">
       <div className=" max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between items-center h-24">
         <div className="flex-shrink-0">
           <img
@@ -59,7 +61,8 @@ const  Navbar = () => {
           </a>
         </div>
       </div>
-    </nav>
+    </div>
+    </Headroom>
 );
   }
 
