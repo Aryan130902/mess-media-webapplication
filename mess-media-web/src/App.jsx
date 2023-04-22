@@ -8,9 +8,9 @@ import Section from './components/Section/Section'
 import Testimonial from './components/Testimonial/Testimonial'
 import Cards from './components/Cards/cards'
 import Img from './components/Img/Img'
-import Toggleaccount from './components/Account/Toggleaccount'
-import MessProfile from './components/MessProfile/MessProfile'
 
+
+>>>>>>> 4bbec3315b3d1a860a14624f166fe7841ea5dd9d
 
 function App() {
   return (
@@ -19,14 +19,16 @@ function App() {
        {/* <Header/>
       <Section/>
       <Testimonial/>
-      <Footer/>
+      <Footer/> */}
      
       <Img/>
       <Cards/>
-      <Footer/> 
-    <Toggleaccount/>*/}
-    <MessProfile/>
-
+      <Footer/>
+<<<<<<< HEAD
+      {/* <Dummy/> */}
+=======
+    
+>>>>>>> 4bbec3315b3d1a860a14624f166fe7841ea5dd9d
     </div>
   )
 }
