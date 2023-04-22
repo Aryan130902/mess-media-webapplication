@@ -13,11 +13,11 @@ const  Navbar = () => {
 
   return (
     <Headroom>
-    <div className="bg-transparent fixed w-full">
+    <div className="bg-dark transparent w-full">
       <div className=" max-w-7xl mx-auto px-2 sm:px-6 lg:px-8 flex justify-between items-center h-24">
-        <div className="flex-shrink-0">
+        <div className="">
           <img
-            className="lg:h-24 sm:h-16 max-w-full "
+            className="lg:h-24 h-16"
             src="/logo.png"
             alt="logo"
           />

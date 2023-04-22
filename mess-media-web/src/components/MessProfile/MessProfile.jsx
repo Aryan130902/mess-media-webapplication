@@ -1,21 +1,33 @@
 import React, { useState } from 'react';
+
+
+// importing icons
 import { MessTabs } from '../../constants/data';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
+
+
+// importing components
 import Overview from './Overview/Overview';
 import Photo from './Photos/Photo';
-
-
+import Reviews from './Reviews/Reviews';
+import Menu from './Menu/Menu';
 
 
 
 const MessProfile = () => {
-  const [activeTab, setActiveTab] = useState('overview');
+  const [activeTab, setActiveTab] = useState(1);
 
+
+//switching the components
   const renderTabContent = () => {
     switch (activeTab) {
-      case 'overview':
+      case 1:
         return <Overview />;
-      case 'photos':
+      case 2:
+        return <Reviews />;
+      case 3:
+        return <Menu />;
+      case 4:
         return <Photo />;
       default:
         return null;
@@ -40,18 +52,19 @@ const MessProfile = () => {
           </div>
           <div className="text-sm font-medium text-center text-gray-500 border-b border-primary dark:text-gray-400 dark:border-gray-700">
             <ul className="flex flex-wrap -mb-px">
-              {MessTabs.map(data => (
+
+              {
+                MessTabs.map(data => (
                 <li className="mr-2" key={data.id}>
                   <button
-                    className={`text-white inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-white hover:border-gray-300 dark:hover:text-gray-300 ${
-                      activeTab === data.id ? 'border-primary' : ''
-                    }`}
+                    className="text-white inline-block p-4 border-b-2 border-transparent rounded-t-lg hover:text-white hover:border-gray-300 dark:hover:text-gray-300 "
                     onClick={() => setActiveTab(data.id)}
                   >
                     {data.tab}
                   </button>
                 </li>
-              ))}
+              ))
+              }
             </ul>
           </div>
           {renderTabContent()}

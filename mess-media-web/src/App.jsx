@@ -15,7 +15,7 @@ import MessProfile from './components/MessProfile/MessProfile'
 function App() {
   return (
     <div className="bg-dark">
-     {/* <Navbar/> */}
+     <Navbar/>
        {/* <Header/>
       <Section/>
       <Testimonial/>
