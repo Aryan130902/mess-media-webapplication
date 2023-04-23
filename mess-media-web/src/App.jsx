@@ -8,27 +8,30 @@ import Section from './components/Section/Section'
 import Testimonial from './components/Testimonial/Testimonial'
 import Cards from './components/Cards/cards'
 import Img from './components/Img/Img'
+import MessProfile from './components/MessProfile/MessProfile'
+import Profile from './components/Profile/Profile'
 
-
->>>>>>> 4bbec3315b3d1a860a14624f166fe7841ea5dd9d
 
 function App() {
   return (
     <div className="bg-dark">
-     <Navbar/>
+     {/* <Navbar/> */}
        {/* <Header/>
       <Section/>
       <Testimonial/>
       <Footer/> */}
      
-      <Img/>
+      {/* <Img/>
       <Cards/>
-      <Footer/>
-<<<<<<< HEAD
+       */}
       {/* <Dummy/> */}
-=======
+      {/* <MessProfile/> */}
+
+
+      {/* <Navbar/> */}
+      <Profile/>
+      <Footer/>
     
->>>>>>> 4bbec3315b3d1a860a14624f166fe7841ea5dd9d
     </div>
   )
 }
