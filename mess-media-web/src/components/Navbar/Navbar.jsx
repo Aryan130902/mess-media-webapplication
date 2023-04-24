@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import styles from './Navbar.module.css';
 import Headroom from 'react-headroom';
-
+import { NavLink } from 'react-router-dom';
 
 
 const  Navbar = () => {
@@ -35,17 +35,28 @@ const  Navbar = () => {
         </div>
         <div className="hidden md:block">
           <div className="ml-10 flex items-baseline space-x-4">
-            <a href="/" className={styles.nav_list}>
-              Home
-            </a>
+            <NavLink to='/'>
+              <a href="/" className={styles.nav_list}>
+                Home
+              </a>
+            </NavLink>
+            <NavLink to='/'>
             <a href="/" className={styles.nav_list}>
               About
             </a>
+            </NavLink>
+            <NavLink to='/'>
             <a href="/" className={styles.nav_list}>
               Contact
             </a>
+            </NavLink>
           </div>
         </div>
+            <NavLink to='/toggleaccount'>
+            <a href="/toggleaccount" className={styles.nav_list}>
+              Login
+            </a>
+            </NavLink>
       </div>
 
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>

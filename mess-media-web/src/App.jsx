@@ -1,3 +1,12 @@
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  Outlet,
+  Navigate
+} from "react-router-dom";
+
+import { useState } from 'react';
 
 //importing components
 import Login from './components/Account/Toggleaccount'
@@ -13,21 +22,41 @@ import MessProfile from './components/MessProfile/MessProfile'
 
 
 function App() {
-  return (
-    <div className="bg-dark">
-     <Navbar/>
-       {/* <Header/>
-      <Section/>
-      <Testimonial/>
-      <Footer/>
-     
-      <Img/>
-      <Cards/>
-      <Footer/> 
-    <Toggleaccount/>*/}
-    <MessProfile/>
 
-    </div>
+
+  return (
+      <div className="bg-dark">
+        <BrowserRouter>
+          <Routes>
+            <Route path="/toggleaccount" element = { <Toggleaccount /> } />
+
+            <Route path="/" element ={ 
+              <div>
+                <Navbar/>
+                <Header/>
+                <Section/>
+                <Footer/>
+              </div> } />
+
+              <Route path="/messprofile" element ={ 
+              <div>
+                <Navbar/>
+                <MessProfile/>
+                <Footer/>
+              </div> } />
+              
+              <Route path="/mess" element ={ 
+              <div>
+                
+                <Img/>
+                <Cards/>
+                <Footer/>
+              </div> } />
+
+          </Routes>
+        </BrowserRouter>
+      </div>
+    
   )
 }
 

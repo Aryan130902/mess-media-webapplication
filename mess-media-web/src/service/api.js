@@ -1,7 +1,7 @@
 import { SERVICE_URLS } from "../constants/service_url";
 
 
-const API_URL = 'http://localhost:8080';
+const API_URL = 'https://mess-media.cyclic.app';
 
 const API = {};
 
@@ -15,9 +15,11 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
         },
         TYPE: getType(value, body)
       };
+      console.log(API_URL + value.url);
       return fetch(API_URL + value.url, requestConfig)
       .then(response => processResponse(response))
       .catch(error => ProcessError(error));
+
     }
 }
 

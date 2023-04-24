@@ -13,9 +13,6 @@ const Toggleaccount = () => {
 
   const[account, toggleaccount] = useState('login');
 
-  const toggle = () => {
-    account === 'signup' ? toggleaccount('login') : toggleaccount('signup');
-    }
 
   return (
     <>
