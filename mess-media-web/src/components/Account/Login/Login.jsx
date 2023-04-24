@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState,useEffect } from 'react'
 import { API } from '../../../service/api'
-
+import { useNavigate } from 'react-router-dom'
 
 
 const loginInitialVlaue = {
@@ -11,18 +11,19 @@ const loginInitialVlaue = {
 
 const Login = ({toggleaccount}) => {
 
+    const navigate = useNavigate();
     const [token, setToken] = useState('');
     const [error , setError] = useState()
-
+    
 
     useEffect(() => {
      
-      // const storedToken = localStorage.getItem('token');
-      // console.log(`token`);
-      // console.log(storedToken);
-      // if (storedToken) {
-      //   setToken(storedToken);
-      // }
+      const storedToken = localStorage.getItem('token');
+      console.log(`token`);
+      console.log(storedToken);
+      if (storedToken) {
+        setToken(storedToken);
+      }
     }, []);
 
     const[login,setLogin]= useState(loginInitialVlaue);
@@ -31,12 +32,13 @@ const Login = ({toggleaccount}) => {
       setLogin({...login, [e.target.name]: e.target.value});
     }
 
-    const signin = async() => {
-     
+    const signin = async(e) => {
+        e.preventDefault();
         let response = await API.signin(login);
         if(response.isSuccess){
-            // console.log(response);
+
             navigate('/');
+
         }else
         {
           setError('Something went wrong please try again!')
@@ -80,7 +82,7 @@ const Login = ({toggleaccount}) => {
                 <button 
                 type="submit" 
                 className="w-full text-gray-900 bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-black rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:focus:ring-primary-800 bg-red-400 hover:bg-red-500"
-                onClick={() => signin()}>
+                onClick={(e) => signin(e)}>
                 Log in
                 </button>
               <p className="text-sm font-light text-gray-900 dark:text-gray-400">

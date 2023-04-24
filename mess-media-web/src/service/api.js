@@ -12,7 +12,9 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
         headers: {
           Accept: 'application/json',
           'Content-Type': 'application/json',
+          'Authorization' : 'Bearer ' + localStorage.getItem('token')
         },
+        body: JSON.stringify(body),
         TYPE: getType(value, body)
       };
       console.log(API_URL + value.url);

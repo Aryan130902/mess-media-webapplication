@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { API } from '../../../service/api'
-
+import { useNavigate } from "react-router-dom";
 
 
 const signupInitialVlaue = {
@@ -13,6 +13,7 @@ const signupInitialVlaue = {
 
 const SignUp = ({toggleaccount}) => {
 
+    const navigate = useNavigate();
     const[signup,setSignup]= useState(signupInitialVlaue);
     const[error,setError] = useState('');
   
@@ -22,18 +23,19 @@ const SignUp = ({toggleaccount}) => {
     }
 
     const signupUser = async(e) => {
+
+      e.preventDefault();
       let response = await API.signup(signup);
 
      
       if(response.isSuccess){
 
-        console.log(response);
-        localStorage.setItem('token', response.data.token );
+        localStorage.setItem('token', response.data.data.token );
         setSignup(signupInitialVlaue);
         const storedToken = localStorage.getItem('token');
-        console.log(`token`);
         console.log(storedToken);
-        toggleaccount('login');
+        navigate('/');
+
       }else if(response.isFailure){
       setError('Something went wrong please try again!')
       }

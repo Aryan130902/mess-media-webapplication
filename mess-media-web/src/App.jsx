@@ -19,22 +19,53 @@ import Cards from './components/Cards/cards'
 import Img from './components/Img/Img'
 import MessProfile from './components/MessProfile/MessProfile'
 import Profile from './components/Profile/Profile'
+import Toggleaccount from "./components/Account/Toggleaccount";
+
+
+const isLogged = ({ isAuthenticated}) => {
+  const token = localStorage.getItem('token');
+  return isAuthenticated && token ? 
+    <>
+      <Outlet />
+    </> : (
+    <>
+    <Navigate replace to='/login' />
+    </>
+    )
+};
 
 
 function App() {
-
+  
+  const [isAuthenticated, isUserAuthenticated] = useState(false);
 
   return (
       <div className="bg-dark">
         <BrowserRouter>
           <Routes>
-            <Route path="/toggleaccount" element = { <Toggleaccount /> } />
+            <Route path="/toggleaccount" element = { <Toggleaccount isUserAuthenticated={isUserAuthenticated}  /> } />
+
+            <Route path="/mess/:id" element={
+              <div>
+              <Navbar/>
+              <MessProfile />
+              <Footer/>
+              </div>
+            }   
+            />
 
             <Route path="/" element ={ 
               <div>
                 <Navbar/>
                 <Header/>
                 <Section/>
+                <Footer/>
+              </div> } />
+
+              <Route path="/profile" element ={ 
+              <div>
+                <Navbar/>
+                <Profile/>
                 <Footer/>
               </div> } />
 
