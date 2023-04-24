@@ -22,28 +22,28 @@ import Profile from './components/Profile/Profile'
 import Toggleaccount from "./components/Account/Toggleaccount";
 
 
-const isLogged = ({ isAuthenticated}) => {
-  const token = localStorage.getItem('token');
-  return isAuthenticated && token ? 
-    <>
-      <Outlet />
-    </> : (
-    <>
-    <Navigate replace to='/login' />
-    </>
-    )
-};
+// const isLogged = ({ isAuthenticated}) => {
+//   const token = localStorage.getItem('token');
+//   return isAuthenticated && token ? 
+//     <>
+//       <Outlet />
+//     </> : (
+//     <>
+//     <Navigate replace to='/login' />
+//     </>
+//     )
+// };
 
 
 function App() {
   
-  const [isAuthenticated, isUserAuthenticated] = useState(false);
+  // const [isAuthenticated, isUserAuthenticated] = useState(false);
 
   return (
       <div className="bg-dark">
         <BrowserRouter>
           <Routes>
-            <Route path="/toggleaccount" element = { <Toggleaccount isUserAuthenticated={isUserAuthenticated}  /> } />
+            <Route path="/toggleaccount" element = { <Toggleaccount /> } />
 
             <Route path="/mess/:id" element={
               <div>
