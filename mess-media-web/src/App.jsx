@@ -17,8 +17,8 @@ import Section from './components/Section/Section'
 import Testimonial from './components/Testimonial/Testimonial'
 import Cards from './components/Cards/cards'
 import Img from './components/Img/Img'
-import Toggleaccount from './components/Account/Toggleaccount'
 import MessProfile from './components/MessProfile/MessProfile'
+import Profile from './components/Profile/Profile'
 
 
 function App() {

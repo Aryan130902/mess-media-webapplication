@@ -14,7 +14,7 @@ const Overview = () => {
                 <div class="flex flex-wrap -m-12">
                 <div class="pb-12 px-12 md:w-3/4 flex flex-col items-start">
                     <h2 class="sm:text-3xl text-2xl title-font font-bold text-white font-sans mt-4 mb-4">Average Cost</h2>
-                    <p class="leading-relaxed mb-8">Rs. 70 per person (approx)</p>
+                    <p class="leading-relaxed mb-8">Rs. 350 per person (approx)</p>
                 </div>
                 </div>  
             </div>
