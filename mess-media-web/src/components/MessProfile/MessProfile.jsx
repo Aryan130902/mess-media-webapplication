@@ -63,7 +63,7 @@ const MessProfile = () => {
           </div>
           <div className="flex items-center mb-16">
             <FaPhone style={{ color: 'white' }} className="mr-2" />
-            <span className="leading-relaxed text-white text-sm">+91 708971****</span>
+            <span className="leading-relaxed text-white text-sm">{messData.contact}</span>
           </div>
           <div className="text-sm font-medium text-center text-gray-500 border-b border-primary dark:text-gray-400 dark:border-gray-700">
             <ul className="flex flex-wrap -mb-px">

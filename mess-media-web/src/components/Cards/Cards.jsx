@@ -29,7 +29,7 @@ const Cards = () => {
 <section className="text-gray-600 body-font">
   <div className="container px-5 py-24 mx-auto">
   
-  <p classNameName="text-white text-3xl font-bold mb-4 mt-0 flex justify-center">Find the Best Messes in your town</p>
+  <p className="text-white text-3xl font-bold mb-4 mt-0 flex justify-center">Find the Best Messes in your town</p>
     <div className="flex flex-wrap -m-4">
   
             {
