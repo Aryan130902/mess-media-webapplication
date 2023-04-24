@@ -12,6 +12,10 @@ Mess Media is a platform that aims to simplify the process of finding and subscr
 
 ## Instructor
 
-This project is developed as a part of the curriculum under [Upendra Singh's].
+This project is developed as a part of the curriculum for the [Upendra Singh's](https://www.linkedin.com/in/upendra-singh-16a3b47/) course on mess management.
+
+## Developers
+
+Mess Media is developed by Aryan Tiwari, Rohit Tomar, Shivam Chaudhary, and Raunit Shrivastav.
 
 ##
