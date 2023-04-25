@@ -12,7 +12,7 @@ Mess Media is a platform that aims to simplify the process of finding and subscr
 
 ## Instructor
 
-This project is developed as a part of the curriculum under Mr. Upendra Singh's guidance.
+This project is developed as a part of the curriculum under Mr. Upendra Singh's & Dr. Lalit Purohit  guidance.
 
 ## Developers
 
