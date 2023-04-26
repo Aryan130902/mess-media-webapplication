@@ -1,7 +1,8 @@
 import { SERVICE_URLS } from "../constants/service_url";
 
-
-const API_URL = 'https://mess-media.cyclic.app';
+// http://localhost:8080
+// https://mess-media.cyclic.app
+const API_URL = 'http://localhost:8080';
 
 const API = {};
 

@@ -39,3 +39,9 @@ export const Testimonial_Images = [
     {id:3 , tab : 'Menu'},
     {id:4 , tab : 'Photos'}
   ]
+
+  export const photo = [
+    {id:1, url : "https://images.pexels.com/photos/1109197/pexels-photo-1109197.jpeg" },
+    {id:2, url : "https://images.pexels.com/photos/291528/pexels-photo-291528.jpeg" },
+    {id:3, url : "https://images.pexels.com/photos/1838607/pexels-photo-1838607.jpeg" },
+  ]

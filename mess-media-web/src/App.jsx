@@ -20,6 +20,7 @@ import Img from './components/Img/Img'
 import MessProfile from './components/MessProfile/MessProfile'
 import Profile from './components/Profile/Profile'
 import Toggleaccount from "./components/Account/Toggleaccount";
+import Createmess from "./components/createmess/createmess";
 
 
 // const isLogged = ({ isAuthenticated}) => {
@@ -59,6 +60,13 @@ function App() {
                 <Navbar/>
                 <Header/>
                 <Section/>
+                <Footer/>
+              </div> } />
+
+              <Route path="/createmess" element ={ 
+              <div>
+                <Navbar/>
+                <Createmess/>
                 <Footer/>
               </div> } />
 

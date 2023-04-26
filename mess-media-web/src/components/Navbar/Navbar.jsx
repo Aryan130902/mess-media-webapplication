@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import styles from './Navbar.module.css';
 import Headroom from 'react-headroom';
 import { NavLink } from 'react-router-dom';
@@ -10,6 +10,24 @@ const  Navbar = () => {
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
+
+  const [storedToken,setToken] = useState(null);
+
+  const loadToken = () => {
+    localStorage.getItem('token') ? (
+      setToken(localStorage.getItem('token'))
+      ) : (
+        setToken(null)
+      )
+  }
+
+  const removeToken = () => {
+    localStorage.removeItem('token');
+  }
+
+  useEffect(()=>{
+    loadToken()
+   },[])
 
   return (
     <Headroom>
@@ -52,11 +70,22 @@ const  Navbar = () => {
             </NavLink>
           </div>
         </div>
+        {
+
+          storedToken === null ? (
             <NavLink to='/toggleaccount'>
             <a href="/toggleaccount" className={styles.nav_list}>
               Login
             </a>
             </NavLink>
+            ):(
+              <NavLink to='/toggleaccount'>
+                <button onClick={() => removeToken()} className={styles.nav_list}>
+                  Logout
+                </button>
+              </NavLink>
+            )
+            }
       </div>
 
       <div className={`${isOpen ? 'block' : 'hidden'} md:hidden`}>

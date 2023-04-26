@@ -16,9 +16,11 @@ const Header = () => {
                 </h1>
             <p class="text-white mb-8 leading-relaxed">Stay up-to-date with the latest information on food availability, exhaustion, and holiday closures. With Mess Media, you never have to worry about missing out on your favorite meals.</p>
             <div class='flex flex-r gap-3'>
+            <NavLink to='/createmess'>
             <div class="flex justify-center m-2">
-                <button class="text-white bg-primary py-2 px-6 hover:border-2 rounded text-lg font-black text-sans">REGISTER NOW!</button>
+                <button class="text-white bg-primary py-2 px-6 hover:border-2 rounded text-lg font-black text-sans">Create Mess!</button>
             </div>
+            </NavLink>
             <NavLink to='/mess'>
             <div class="flex justify-center m-2">
                 <button class="text-white bg-primary py-2 px-6 hover:border-2 rounded text-lg font-black text-sans">BROWSE MESS</button>
