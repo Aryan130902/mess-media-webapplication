@@ -18,4 +18,6 @@ This project is developed as a part of the curriculum under Mr. Upendra Singh's 
 
 Mess Media is developed by Aryan Tiwari, Rohit Singh Tomar, Shivam Chaudhary, and Raunit Shrivastav.
 
-##
+## Website
+
+[check out the website](https://comfy-creponne-90c4cd.netlify.app)
